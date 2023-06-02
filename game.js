@@ -11,7 +11,29 @@ class Coregameplay extends Phaser.Scene {
 
     create() {
         this.rp = this.add.sprite(50, 400, 'roly poly').setScale(0.1);
-        
+        this.keys = game.input.keyboard.createCursorKeys();
+
+        this.snail_1 = this.add.sprite(200, 400, 'snails').setScale(0.1);
+        this.snail_2 = this.add.sprite(300, 400, 'snails').setScale(0.1);
+    }
+
+    update() {
+        const { left, right, up } = this.cursors;
+
+        if (left.isDown) {
+            this.rp.setVelocityX(-500); // Move left
+        }
+        else if (right.isDown) {
+            this.rp.setVelocityX(500); // Move left
+        }
+        else {
+            this.rp.setVelocityX(0); // Stand Still
+            this.rp.setFrame()
+        }
+        if (up.isDown && this.rp.body.touching.down) // Player1 Grounded Check
+        {
+            this.rp.setVelocityY(-600); // Jump
+        }
     }
 }
 
