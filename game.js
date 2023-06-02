@@ -10,7 +10,7 @@ class Coregameplay extends Phaser.Scene {
     }
 
     create() {
-        this.rp = this.add.sprite(100, 200, 'roly poly').setScale(0.1);
+        this.rp = this.add.sprite(100, 200, 'roly poly').setScale(1);
         this.keys = game.input.keyboard.createCursorKeys();
 
         this.snail_1 = this.add.sprite(200, 400, 'snails').setScale(0.1);
