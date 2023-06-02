@@ -4,8 +4,8 @@ class Coregameplay extends Phaser.Scene {
     }
     preload(){
         this.load.path = './assets';
-        this.load.image('roly poly', 'roly_poly.png');
-        this.load.image('snails', 'snail.png');
+        this.load.image('roly poly', 'assets/roly_poly.png');
+        this.load.image('snails', 'assets/snail.png');
 
     }
 
